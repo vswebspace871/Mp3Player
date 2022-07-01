@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brick2"
+    tools:context=".MusicActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/itunes"
+        android:id="@+id/musicIcon"
+        android:layout_marginTop="40dp"
+        android:padding="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="song name will be here.mp3"
+        android:textColor="#5E6060"
+        android:textSize="21sp"
+        android:layout_margin="30dp"
+        android:layout_marginTop="40dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:layout_gravity="center"
+        android:id="@+id/textViewFileNameMusic"  />
+
+    <SeekBar
+        android:id="@+id/music_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:theme="@style/MySeekBar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="25dp"
+            android:id="@+id/textViewProgress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="260dp"
+            android:id="@+id/textViewTotalTime" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="55dp"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:id="@+id/previous"
+            app:tint="@color/black"
+            android:src="@drawable/ic_baseline_skip_previous_24"
+            android:layout_marginEnd="30dp"/>
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:tint="@color/black"
+            android:id="@+id/pause"
+            android:src="@drawable/ic_baseline_pause_24"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            app:tint="@color/black"
+            android:id="@+id/next"
+            android:src="@drawable/ic_baseline_skip_next_24"
+            android:layout_marginStart="30dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
