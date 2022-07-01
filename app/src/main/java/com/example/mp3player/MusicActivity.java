@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -74,6 +75,16 @@ public class MusicActivity extends AppCompatActivity {
                 new Handler().postDelayed(this, 100);
             }
         });
+        // jab ek song poora ho jaayega to dusra song apne aap chalne lagega, is function se
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                Toast.makeText(MusicActivity.this, "Changing Song", Toast.LENGTH_SHORT).show();
+                playNextSong();
+            }
+        });
+
+
 
         //if user change seekbar backward and forward
         music_seek_bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
